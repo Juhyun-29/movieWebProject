@@ -5,8 +5,13 @@
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=UTF-8");
 		
+		// 검색어
 		String query=request.getParameter("query");
-		//전체 게시물의 개수(중요 변수)
+		
+		// 검색유형
+		String searchType=request.getParameter("searchType");
+		
+		// 전체 게시물의 개수(중요 변수)
 		int totalCount=Integer.parseInt(request.getParameter("totalCount"));
 		
 		// 한 페이지에 출력될 게시물의 수(10개를 기준으로 잡음)
@@ -45,30 +50,30 @@
 		
 		// 처음 링크(두 번째 페이지 이동 시 활성화)
 		if(startPage>1) { %>
-			<a href="search?query=<%=query %>&page=1">처음</a>
+			<a href="search?searchType=<%=searchType %>&query=<%=query %>&page=1">처음</a>
 		<%}
 		
 		// 이전 링크
 		if(pg>1) {%>
-			<a href="search?query=<%=query %>&page=<%=pg-1%>">이전</a>
+			<a href="search?searchType=<%=searchType %>&query=<%=query %>&page=<%=pg-1%>">이전</a>
 		<% }
 		
 		// 반복문을 이용하여 페이지리스트 생성. 현재페이지번호를 강조하기 위해 b태그 사용.
 		for (int iCount = startPage; iCount <= endPage; iCount++) {
 			if (iCount == pg) {%>
-				<a href="search?query=<%=query %>&page=<%=iCount%>"><b><%=iCount %></b></a>
+				<a href="search?searchType=<%=searchType %>&query=<%=query %>&page=<%=iCount%>"><b><%=iCount %></b></a>
 			<% } else {%>
-				<a href="search?query=<%=query %>&page=<%=iCount%>"><%=iCount %></a>
+				<a href="search?searchType=<%=searchType %>&query=<%=query %>&page=<%=iCount%>"><%=iCount %></a>
 			<% }
 		}
 		
 		// 다음 링크
 		if(pg<totalPage) {%>
-			<a href="search?query=<%=query %>&page=<%=pg+1%>">다음</a>
+			<a href="search?searchType=<%=searchType %>&query=<%=query %>&page=<%=pg+1%>">다음</a>
 		<% }
 		
 		// 끝 링크
 		if(endPage<totalPage) {%>
-			<a href="search?query=<%=query %>&page=<%=totalPage %>">끝</a>
+			<a href="search?searchType=<%=searchType %>&query=<%=query %>&page=<%=totalPage %>">끝</a>
 		<%}
 %>

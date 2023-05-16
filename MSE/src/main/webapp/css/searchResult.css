@@ -108,19 +108,28 @@ a{
 	margin: 0 auto;
 	display: flex;
 }
+#searchType{
+	width: 10%;
+	height: 100%;
+	font-size: 15px;
+	text-align: center;
+	border: 3px solid #c2c2c2;
+	border-right: 0px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
 #searchInput{
-	width: 91%;
+	width: 80%;
 	height: 100%;
 	font-size: 20px;
 	padding-top: 2px;
 	padding-left: 15px;
 	border: 3px solid #c2c2c2;
 	border-right: 0px;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+	border-left: 0px;
 }
 #searchSubmit{
-	width: 9%;
+	width: 10%;
 	height: 100%;
 	display: block;
 	background-color: #161616;

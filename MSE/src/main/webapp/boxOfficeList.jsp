@@ -11,7 +11,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
 	integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
 	crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="js/boxOffice.js"></script>
+<script src="js/boxOfficeList.js"></script>
 <script src="js/sideBar.js"></script>
 <link rel="stylesheet"
 	href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css">
@@ -35,27 +35,7 @@
 						<td>상영횟수</td>
 					</tr>
 				</thead>
-				<tbody>
-					<c:if test="${not empty dailyBoxOfficeList }">
-						<c:forEach items="${dailyBoxOfficeList }" var="boxoffice">
-							<tr>
-								<td><c:out value="${boxoffice.rank }" /></td>
-								<td><a href="search?query=${boxoffice.movieNm }"><c:out
-											value="${boxoffice.movieNm }" /></a></td>
-								<td><c:out value="${boxoffice.openDt }" /></td>
-								<td><fmt:formatNumber value="${boxoffice.audiCnt }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.audiInten }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.audiAcc }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.scrnCnt }"
-										pattern="#,###" />개</td>
-								<td><fmt:formatNumber value="${boxoffice.showCnt }"
-										pattern="#,###" />회</td>
-							</tr>
-						</c:forEach>
-					</c:if>
+				<tbody id="dailyBoxOfficeList">
 				</tbody>
 			</table>
 

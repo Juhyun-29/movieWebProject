@@ -115,6 +115,7 @@ public class SearchEngine extends HttpServlet {
 			
 			request.setAttribute("page", page);
 			request.setAttribute("query", query);
+			request.setAttribute("searchType", searchType);
 			request.setAttribute("keyword", keyword);			
 			request.setAttribute("totalCount", totalCount);			
 			request.setAttribute("finalMovieList", finalMovieList);			

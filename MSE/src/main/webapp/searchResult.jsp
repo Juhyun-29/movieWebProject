@@ -24,7 +24,12 @@
 		<div id="searchContainer">
   			<div id="search">
   				<form id="searchForm" name="searchForm" action="search">
-  					<input id="searchInput" type="text" name="query" placeholder="영화 제목을 입력하세요..." value="${keyword }">
+  					<select id="searchType" name="searchType">
+  						<option value="title">영화명</option>
+  						<option value="director">감독명</option>
+  						<option value="actor">배우명</option>
+  					</select>
+  					<input id="searchInput" type="text" name="query" placeholder="검색 유형을 선택하고 검색어를 입력하세요..." value="${keyword }">
   					<a id="searchSubmit" onclick="document.searchForm.submit();"><img alt="searchImg" src="img/search.png" height="36px"></a>
   				</form>
   			</div>
@@ -48,9 +53,10 @@
 			<!-- 페이지 리스트 삽입 시작 -->
 			<div id="paging">
 				<jsp:include page="searchResultPage.jsp">
-					<jsp:param value="${query }" name="query"/>
+					<jsp:param value="${query}" name="query"/>
+					<jsp:param value="${searchType}" name="searchType"/>
 					<jsp:param value="${totalCount}" name="totalCount"/>
-					<jsp:param value="${page }" name="pg"/>
+					<jsp:param value="${page}" name="pg"/>
 				</jsp:include>
 			</div>
 			<!-- 페이지 리스트 삽입 끝 -->
