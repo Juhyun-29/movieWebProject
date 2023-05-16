@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'NanumSquareNeo';
+	background-color: black;
+}
+h2{
+	margin-bottom: 12px;
+}
+a{
+	text-decoration: none;
+}
+#container
+{
+	height: 100%;
+	display: flex;
+	color: #c2c2c2;
+}
+
+#sideBar
+{
+	width: 7%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #161616;
+	position: fixed;
+	font-size: 14px;
+}
+#sideBar a{
+	font-size: 14px;
+	color: #c2c2c2;
+}
+
+.logo{
+	text-align: center;
+	position: absolute;
+	top: 1%;
+}
+.btnImg{
+	text-align: center;
+}
+.btnImg a{
+	display: block;
+	padding-top: 25%;
+	padding-bottom: 22%;
+}
+.btnImg a:hover{
+	background-color: black;
+}
+.btnImg a img{
+	transition: all 0.2s linear;
+}
+.btnImg a:hover img{
+	transform: scale(1.1);
+}
+.active{
+	background-color: black;
+	border-right: 2px solid red;
+}
+
+#subContainer1
+{
+	width: 93%;
+	height: 100%;
+	display: flex;
+	position: fixed;
+	right: 0;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	flex-direction: column;
+}
+#subContainer1::-webkit-scrollbar{
+	width: 10px;
+}
+#subContainer1::-webkit-scrollbar-thumb{
+	height: 30%;
+	background: #c2c2c2;
+	border-radius: 10px;
+}
+#subContainer1::-webkit-scrollbar-track{
+	background: #161616;
+}
+
+
+
+
+.simpleInfo{
+	font-size: 14px;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+.text-clamp {
+  display: -webkit-box; /* 레이아웃을 박스 형태로 지정 */
+  -webkit-box-orient: vertical; /* 박스의 정렬 방향을 수직으로 설정 */
+  -webkit-line-clamp: 3; /* 표시할 라인 수를 3으로 제한 */
+  overflow: hidden; /* 넘치는 텍스트를 숨김 */
+  margin-bottom: 16px;
+}
+
+
+
+.movieImg a img{
+	margin-right: 15px;
+	margin-bottom: 10px;
+	transition: all 0.2s linear;
+}
+.movieImg a:hover img{
+	transform: scale(1.1);
+}
+
+#footer
+{
+	clear: both;
+	width: 100%;
+}

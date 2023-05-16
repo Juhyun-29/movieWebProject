@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'NanumSquareNeo';
+	background-color: black;
+}
+h2{
+	margin-bottom: 12px;
+}
+a{
+	text-decoration: none;
+}
+
+#container
+{
+	height: 100%;
+	display: flex;
+	color: #c2c2c2;
+}
+
+#sideBar
+{
+	width: 7%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background-color: #161616;
+	position: fixed;
+	font-size: 14px;
+}
+#sideBar a{
+	color: #c2c2c2;
+}
+
+.logo{
+	text-align: center;
+	position: absolute;
+	top: 1%;
+}
+.btnImg{
+	text-align: center;
+}
+.btnImg a{
+	display: block;
+	padding-top: 25%;
+	padding-bottom: 22%;
+}
+.btnImg a:hover{
+	background-color: black;
+}
+
+.active{
+	background-color: black;
+	border-right: 2px solid red;
+}
+
+#searchContainer
+{
+	width: 93%;
+	height: 100%;
+	display: flex;
+	position: fixed;
+	right: 0;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	flex-direction: column;
+}
+#searchContainer::-webkit-scrollbar{
+	width: 10px;
+}
+#searchContainer::-webkit-scrollbar-thumb{
+	height: 30%;
+	background: #c2c2c2;
+	border-radius: 10px;
+}
+#searchContainer::-webkit-scrollbar-track{
+	background: #161616;
+}
+
+#btns{
+	width: 100%;
+	margin-top: 15px;
+	display: flex;
+	flex-direction: row;
+	line-height: 40px;
+}
+.divBtn a{
+	color: black;
+}
+
+#search{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+#searchForm{
+	width: 60%;
+	height: 40px;
+	margin: 0 auto;
+	display: flex;
+}
+#searchType{
+	width: 10%;
+	height: 100%;
+	font-size: 15px;
+	text-align: center;
+	border: 3px solid #c2c2c2;
+	border-right: 0px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#searchInput{
+	width: 80%;
+	height: 100%;
+	font-size: 20px;
+	padding-top: 2px;
+	padding-left: 15px;
+	border: 3px solid #c2c2c2;
+	border-right: 0px;
+	border-left: 0px;
+}
+#searchSubmit{
+	width: 10%;
+	height: 100%;
+	display: block;
+	background-color: #161616;
+	text-align: center;
+	border: 3px solid #c2c2c2;
+	border-left: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+#searchSubmit:hover{
+	cursor: pointer;
+}
+
+
+#footer
+{
+	clear: both;
+	width: 100%;
+}
