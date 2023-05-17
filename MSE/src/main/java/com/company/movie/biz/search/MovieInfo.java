@@ -56,10 +56,12 @@ public class MovieInfo extends HttpServlet {
 			String runtime=(String)movieInfo.get("runtime");
 			
 			String repRlsDate=(String)movieInfo.get("repRlsDate");
-			SimpleDateFormat dtFormat=new SimpleDateFormat("yyyyMMdd");
-			SimpleDateFormat newDtFormat=new SimpleDateFormat("yyyy-MM-dd");
-			Date newDt=dtFormat.parse(repRlsDate);
-			repRlsDate=newDtFormat.format(newDt);
+			if(repRlsDate.length()>7) {
+				SimpleDateFormat dtFormat=new SimpleDateFormat("yyyyMMdd");
+				SimpleDateFormat newDtFormat=new SimpleDateFormat("yyyy-MM-dd");
+				Date newDt=dtFormat.parse(repRlsDate);
+				repRlsDate=newDtFormat.format(newDt);
+			}
 			
 			JSONObject plots=(JSONObject)movieInfo.get("plots");
 			JSONArray plot=(JSONArray)plots.get("plot");

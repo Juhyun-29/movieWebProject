@@ -95,7 +95,11 @@ a{
 #dailyBoxOffice a{
 	color: #c2c2c2;
 }
-#dailyBoxOffice tr,td{
+th{
+	background-color: #c2c2c2;
+	color: black;
+}
+tr,th,td{
 	padding: 5px;
 }
 

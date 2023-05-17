@@ -72,10 +72,10 @@ public class SearchEngine extends HttpServlet {
 				// 성인 영화 필터링 된 검색 결과를 담을 JSONArray 생성
 				JSONArray movieList=new JSONArray();
 				
-				// 최초 검색 결과에서 성인 영화, 장르·개봉날짜·런타임 미정, 극장상영 x 필터링
+				// 최초 검색 결과에서 에로 영화, 장르·런타임·개봉날짜 없는 영화, 극장 상영 안한 영화 필터링
 				for (int i = 0; i < searchResult.size(); i++) {
 					JSONObject movieResult=(JSONObject)searchResult.get(i);
-					if(movieResult.get("genre").equals("에로")||movieResult.get("genre").equals("")||!movieResult.get("use").equals("극장용")||movieResult.get("repRlsDate").equals("")||movieResult.get("runtime").equals("")) {
+					if(movieResult.get("genre").equals("에로")||movieResult.get("genre").equals("")||movieResult.get("runtime").equals("")||movieResult.get("repRlsDate").equals("")||!movieResult.get("use").equals("극장용")) {
 						continue;
 					}else {
 						// 필터링 된 검색 결과를 위에서 선언한 movieList에 담음
@@ -114,7 +114,7 @@ public class SearchEngine extends HttpServlet {
 							title=title.replace("!HE", "");
 							title=title.replaceAll("  ", "");
 							movieInfo.put("title", title);
-							
+
 							// 영화 포스터 1개만 가져오기
 							String posters=(String)movieInfo.get("posters");
 							String[] posterList=posters.split("\\|");
@@ -150,7 +150,7 @@ public class SearchEngine extends HttpServlet {
 					request.setAttribute("keyword", keyword);			
 					request.setAttribute("totalCount", totalCount);			
 					request.setAttribute("finalMovieList", finalMovieList);			
-
+					
 					RequestDispatcher dispatcher=request.getRequestDispatcher("searchResult.jsp");
 					dispatcher.forward(request, response);	
 				}

@@ -26,6 +26,11 @@
 		// 전체 페이지 수(전체 게시물/한 페이지에 출력될 게시물 수)
 		int totalPage=totalCount/countList;
 		
+		// 10개가 꽉 안 차는 페이지가 존재할 경우를 위한 보정
+		if(totalCount%countList>0){
+			totalPage++;
+		}
+		
 		// 현재 페이지를 기준으로 한 화면에서 시작 페이지 값을 보여줌
 		int startPage=((pg-1)/countList)*countPage+1;	
 		

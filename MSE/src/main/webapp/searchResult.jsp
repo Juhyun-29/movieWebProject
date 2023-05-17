@@ -56,7 +56,7 @@
 						</div>
 					</c:otherwise>
 				</c:choose>
-		
+			<hr>
 			<!-- 페이지 리스트 삽입 시작 -->
 			<div id="paging">
 				<jsp:include page="searchResultPage.jsp">

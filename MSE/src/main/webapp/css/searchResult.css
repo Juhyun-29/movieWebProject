@@ -154,8 +154,8 @@ a{
 
 #list{
 	width: 95%;
-	margin-left: 30px;
-	margin-right: 30px;	
+	padding-left: 100px;
+	padding-right: 50px;	
 }
 .list-group{
 	display: flex;
@@ -192,7 +192,7 @@ a{
 
 #paging{
 	height: 40px;
-	margin-left: 30px;
+	padding-left: 100px;
 }
 #paging a{
 	font-size: 20px;

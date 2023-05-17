@@ -25,14 +25,14 @@
 			<table id="dailyBoxOffice" border="1" class="table">
 				<thead class="table-dark">
 					<tr>
-						<td>순위</td>
-						<td>영화명</td>
-						<td>개봉일</td>
-						<td>관객수</td>
-						<td>관객수증감(전일대비)</td>
-						<td>누적관객수</td>
-						<td>스크린수</td>
-						<td>상영횟수</td>
+						<th>순위</th>
+						<th>영화명</th>
+						<th>개봉일</th>
+						<th>관객수</th>
+						<th>관객수증감(전일대비)</th>
+						<th>누적관객수</th>
+						<th>스크린수</th>
+						<th>상영횟수</th>
 					</tr>
 				</thead>
 				<tbody id="dailyBoxOfficeList">
@@ -44,14 +44,14 @@
 			<table border="1" class="table">
 				<thead class="table-dark">
 					<tr>
-						<td>순위</td>
-						<td>영화명</td>
-						<td>개봉일</td>
-						<td>관객수</td>
-						<td>관객수증감(전주대비)</td>
-						<td>누적관객수</td>
-						<td>스크린수</td>
-						<td>상영횟수</td>
+						<th>순위</th>
+						<th>영화명</th>
+						<th>개봉일</th>
+						<th>관객수</th>
+						<th>관객수증감(전주대비)</th>
+						<th>누적관객수</th>
+						<th>스크린수</th>
+						<th>상영횟수</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -82,14 +82,14 @@
 			<table border="1" class="table">
 				<thead class="table-dark">
 					<tr>
-						<td>순위</td>
-						<td>영화명</td>
-						<td>개봉일</td>
-						<td>관객수</td>
-						<td>관객수증감(전주대비)</td>
-						<td>누적관객수</td>
-						<td>스크린수</td>
-						<td>상영횟수</td>
+						<th>순위</th>
+						<th>영화명</th>
+						<th>개봉일</th>
+						<th>관객수</th>
+						<th>관객수증감(전주대비)</th>
+						<th>누적관객수</th>
+						<th>스크린수</th>
+						<th>상영횟수</th>
 					</tr>
 				</thead>
 				<tbody>
