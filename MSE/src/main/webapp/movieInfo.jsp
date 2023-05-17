@@ -36,30 +36,7 @@
 	<div id="footer"></div>
 	
 	
-<!-- 	<h4>감독</h4> -->
-<%-- 	<c:forEach items="${staff }" var="staff"> --%>
-<%-- 		<c:if test="${staff.job=='Director'}"> --%>
-<%-- 			<img alt="profile" src="${imgPath2 }${staff.profile_path}" onerror="this.src='${unknownImg }'"> --%>
-<%-- 			<a href="person?person_id=${staff.id }"><c:out value="${staff.name }"/></a> --%>
-<%-- 		</c:if> --%>
-<%-- 	</c:forEach> --%>
-<!-- 	<h4>각본</h4> -->
-<%-- 	<c:forEach items="${staff }" var="staff"> --%>
-<%-- 		<c:if test="${staff.job=='Screenplay'}"> --%>
-<%-- 			<img alt="profile" src="${imgPath2 }${staff.profile_path}" onerror="this.src='${unknownImg }'"> --%>
-<%-- 			<a href="person?person_id=${staff.id }"><c:out value="${staff.name }"/></a> --%>
-<%-- 		</c:if> --%>
-<%-- 		<c:if test="${staff.job=='Writer'}"> --%>
-<%-- 			<img alt="profile" src="${imgPath2 }${staff.profile_path}" onerror="this.src='${unknownImg }'"> --%>
-<%-- 			<a href="person?person_id=${staff.id }"><c:out value="${staff.name }"/></a> --%>
-<%-- 		</c:if> --%>
-<%-- 	</c:forEach> --%>
-<!-- 	<h4>주요 출연진</h4> -->
-<%-- 	<c:forEach items="${cast }" var="cast" end="6"> --%>
-<%-- 		<img alt="profile" src="${imgPath2 }${cast.profile_path}" onerror="this.src='${unknownImg }'"> --%>
-<%-- 		<a href="person?person_id=${cast.id }"><b>${cast.name }</b></a> <br> --%>
-<%-- 		${cast.character } 역 --%>
-<%-- 	</c:forEach> --%>
+
 	
 </body>
 </html>

@@ -35,20 +35,27 @@
   			</div>
   			<div id="searchResult">
   				<hr>
-  				<ul id="list">
-  					<c:if test="${not empty finalMovieList }">
-						<c:forEach items="${finalMovieList }" var="movie">
-							<li class="list-group">
-								<div class="movieImg"><a href="movie?movieId=${movie.movieId}&movieSeq=${movie.movieSeq}"><img class="" alt="poster" src="${movie.posters}"></a></div>
-								<div class="list-group-item">
-									<a href="movie?movieId=${movie.movieId}&movieSeq=${movie.movieSeq}"><b>${movie.title}</b></a>
-									<div class="simpleInfo">${movie.rating}&nbsp;&nbsp;${movie.repRlsDate}&nbsp;&nbsp;${movie.genre}&nbsp;&nbsp;${movie.runtime}분</div>
-									<div id="overview" class="text-clamp">${movie.overview}</div>
-								</div>
-							</li>
-						</c:forEach>		
-					</c:if>
-				</ul>
+  				<c:choose>
+	  				<c:when test="${not empty finalMovieList }">
+	  					<ul id="list">
+							<c:forEach items="${finalMovieList }" var="movie">
+								<li class="list-group">
+									<div class="movieImg"><a href="movie?movieId=${movie.movieId}&movieSeq=${movie.movieSeq}"><img class="" alt="poster" src="${movie.posters}"></a></div>
+									<div class="list-group-item">
+										<a href="movie?movieId=${movie.movieId}&movieSeq=${movie.movieSeq}"><b>${movie.title}</b></a>
+										<div class="simpleInfo">${movie.rating}&nbsp;&nbsp;${movie.repRlsDate}&nbsp;&nbsp;${movie.genre}&nbsp;&nbsp;${movie.runtime}분</div>
+										<div id="overview" class="text-clamp">${movie.overview}</div>
+									</div>
+								</li>
+							</c:forEach>		
+						</ul>
+					</c:when>
+					<c:otherwise>
+						<div id="noResult">
+							<c:out value="${msg}"/>
+						</div>
+					</c:otherwise>
+				</c:choose>
 		
 			<!-- 페이지 리스트 삽입 시작 -->
 			<div id="paging">

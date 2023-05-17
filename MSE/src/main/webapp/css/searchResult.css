@@ -111,7 +111,7 @@ a{
 #searchType{
 	width: 10%;
 	height: 100%;
-	font-size: 15px;
+	font-size: 16px;
 	text-align: center;
 	border: 3px solid #c2c2c2;
 	border-right: 0px;
@@ -183,6 +183,11 @@ a{
   -webkit-line-clamp: 3; /* 표시할 라인 수를 3으로 제한 */
   overflow: hidden; /* 넘치는 텍스트를 숨김 */
   margin-bottom: 16px;
+}
+
+#noResult{
+	text-align: center;
+	font-size: 18px;
 }
 
 #paging{

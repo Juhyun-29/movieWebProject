@@ -22,7 +22,7 @@
 	<div id="container">
 		<jsp:include page="frame/sideBarBoxOffice.jsp" />
 		<div id="subContainer">
-			<table border="1" class="table">
+			<table id="dailyBoxOffice" border="1" class="table">
 				<thead class="table-dark">
 					<tr>
 						<td>순위</td>
