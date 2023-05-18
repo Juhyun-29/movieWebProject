@@ -22,6 +22,7 @@
 	<div id="container">
 		<jsp:include page="frame/sideBarBoxOffice.jsp" />
 		<div id="subContainer">
+			<div id="dailyHeader" class="chartHeader"></div>
 			<table id="dailyBoxOffice" border="1" class="table">
 				<thead class="table-dark">
 					<tr>
@@ -35,12 +36,10 @@
 						<th>상영횟수</th>
 					</tr>
 				</thead>
-				<tbody id="dailyBoxOfficeList">
-				</tbody>
+				<tbody id="dailyBoxOfficeList"></tbody>
 			</table>
-
-			<h4>${weekendTime }</h4>
-			<p>${weekendRange }</p>
+			
+			<div id="weekendHeader" class="chartHeader"></div>
 			<table border="1" class="table">
 				<thead class="table-dark">
 					<tr>
@@ -54,31 +53,10 @@
 						<th>상영횟수</th>
 					</tr>
 				</thead>
-				<tbody>
-					<c:if test="${not empty weekendBoxOfficeList }">
-						<c:forEach items="${weekendBoxOfficeList }" var="boxoffice">
-							<tr>
-								<td><c:out value="${boxoffice.rank }" /></td>
-								<td><c:out value="${boxoffice.movieNm }" /></td>
-								<td><c:out value="${boxoffice.openDt }" /></td>
-								<td><fmt:formatNumber value="${boxoffice.audiCnt }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.audiInten }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.audiAcc }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.scrnCnt }"
-										pattern="#,###" />개</td>
-								<td><fmt:formatNumber value="${boxoffice.showCnt }"
-										pattern="#,###" />회</td>
-							</tr>
-						</c:forEach>
-					</c:if>
-				</tbody>
+				<tbody id="weekendBoxOfficeList"></tbody>
 			</table>
-
-			<h4>${weeklyTime }</h4>
-			<p>${weeklyRange }</p>
+			
+			<div id="weeklyHeader" class="chartHeader"></div>
 			<table border="1" class="table">
 				<thead class="table-dark">
 					<tr>
@@ -92,27 +70,7 @@
 						<th>상영횟수</th>
 					</tr>
 				</thead>
-				<tbody>
-					<c:if test="${not empty weeklyBoxOfficeList }">
-						<c:forEach items="${weeklyBoxOfficeList }" var="boxoffice">
-							<tr>
-								<td><c:out value="${boxoffice.rank }" /></td>
-								<td><c:out value="${boxoffice.movieNm }" /></td>
-								<td><c:out value="${boxoffice.openDt }" /></td>
-								<td><fmt:formatNumber value="${boxoffice.audiCnt }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.audiInten }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.audiAcc }"
-										pattern="#,###" />명</td>
-								<td><fmt:formatNumber value="${boxoffice.scrnCnt }"
-										pattern="#,###" />개</td>
-								<td><fmt:formatNumber value="${boxoffice.showCnt }"
-										pattern="#,###" />회</td>
-							</tr>
-						</c:forEach>
-					</c:if>
-				</tbody>
+				<tbody id="weeklyBoxOfficeList"></tbody>
 			</table>
 		</div>
 	</div>

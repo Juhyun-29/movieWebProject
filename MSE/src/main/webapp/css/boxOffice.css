@@ -89,12 +89,26 @@ a{
 	background: #161616;
 }
 
-#dailyBoxOffice{
-	padding: 20px;
+.table{
+	border-collapse:collapse;
+	margin: 20px;
+	margin-top: 10px;
 }
-#dailyBoxOffice a{
+.table a{
 	color: #c2c2c2;
 }
+span{
+	font-size: 14px;
+}
+
+.chartHeader{
+	margin-left: 20px;
+	margin-top: 20px;	
+}
+.chartHeader a{
+	font-size: 20px;
+}
+
 th{
 	background-color: #c2c2c2;
 	color: black;
