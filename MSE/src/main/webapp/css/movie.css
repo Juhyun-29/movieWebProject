@@ -65,6 +65,18 @@ a{
 	background-color: black;
 	border-right: 2px solid red;
 }
+#loginout{
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 3%;
+}
+#loginout a{
+	font-size: 16px;
+}
+#insertUser{
+	margin-bottom: 10px;
+}
 
 #subContainer1
 {

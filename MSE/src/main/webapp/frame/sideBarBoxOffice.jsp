@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <body>
 		<div id="sideBar">
 			<div class="logo">
@@ -19,6 +21,21 @@
 			</div>
 			<div class="btnImg">
 				<a id="myPageBtn" class="link5" href="#"><img alt="upcomingImg" src="img/upcoming.png" width="30px"><br>마이페이지</a>
+			</div>
+			<div id="loginout">
+				<c:choose>
+					<c:when test="${empty name}">
+						<div id="insertUser">
+							<a href="insertUser.do">회원가입</a>
+						</div>
+						<div id="login">
+							<a href="login.do">로그인</a>
+						</div>
+					</c:when>
+					<c:otherwise>
+						<a id="logout" href="logout.do">로그아웃</a>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 </body>
