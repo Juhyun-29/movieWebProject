@@ -21,6 +21,7 @@
 		<jsp:include page="frame/sideBarSearch.jsp"/>
 		<div id="searchContainer">
   			<div id="search">
+  				<img alt="movie" src="img/searchImg.jpg" width="60%">
   				<form id="searchForm" name="searchForm" action="search">
   					<select id="searchType" name="searchType">
   						<option value="title">영화명</option>
@@ -30,9 +31,9 @@
   					<input id="searchInput" type="text" name="query" placeholder="검색 유형을 선택하고 검색어를 입력하세요...">
   					<a id="searchSubmit" onclick="document.searchForm.submit();"><img alt="searchImg" src="img/search.png" height="36px"></a>
   				</form>
+  				<span>감독명·배우명의 경우 동명이인이 함께 검색될 수 있습니다</span>
   			</div>
   			<div id="searchResult">
-  				
   			</div>
   		</div>
 	</div>

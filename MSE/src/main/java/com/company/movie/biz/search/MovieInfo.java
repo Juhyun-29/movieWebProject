@@ -68,13 +68,16 @@ public class MovieInfo extends HttpServlet {
 			JSONObject plotData=(JSONObject)plot.get(0);
 			String plotText=(String)plotData.get("plotText");
 			
+			String stlls=(String)movieInfo.get("stlls");
+			String[] stllList=stlls.split("\\|");
+			
 			JSONObject staffs=(JSONObject)movieInfo.get("staffs");
 			JSONArray staff=(JSONArray)staffs.get("staff");
 			
 			JSONArray staffList=new JSONArray();
 			JSONArray actorList=new JSONArray();
 			for (int i = 0; i < staff.size(); i++) {
-				if(i<10) {
+				if(i<12) {
 					JSONObject staffResult=(JSONObject)staff.get(i);
 					if(staffResult.get("staffRoleGroup").equals("감독")||staffResult.get("staffRoleGroup").equals("원작")||staffResult.get("staffRoleGroup").equals("각본")){
 						staffList.add(staffResult);
@@ -89,7 +92,9 @@ public class MovieInfo extends HttpServlet {
 			}
 			
 			String keywords=(String)movieInfo.get("keywords");
+			String msg="스틸컷이 없습니다.";
 			
+			request.setAttribute("movieId", movieId);
 			request.setAttribute("movieSeq", movieSeq);
 			request.setAttribute("title", title);
 			request.setAttribute("poster", poster);
@@ -98,8 +103,10 @@ public class MovieInfo extends HttpServlet {
 			request.setAttribute("runtime", runtime);
 			request.setAttribute("repRlsDate", repRlsDate);
 			request.setAttribute("plotText", plotText);
+			request.setAttribute("stllList", stllList);
 			request.setAttribute("staffList", staffList);
 			request.setAttribute("actorList", actorList);
+			request.setAttribute("msg", msg);
 
 			RequestDispatcher dispatcher=request.getRequestDispatcher("movieInfo.jsp");
 			dispatcher.forward(request, response);

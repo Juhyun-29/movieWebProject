@@ -45,9 +45,12 @@ $(function(){
          }
       })
       
+      var weekday=new Date(today.setDate(today.getDate()-5));
+      var weekdate=weekday.toISOString().substring(0,10).replace(/-/g,'');
+      
       $.ajax({
          type: "GET",
-         url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key="+kobisKey+"&targetDt="+date,
+         url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key="+kobisKey+"&targetDt="+weekdate,
          success: function(response){
             var weekendBoxOffice=response["boxOfficeResult"]["weeklyBoxOfficeList"];
             
@@ -92,7 +95,7 @@ $(function(){
       
       $.ajax({
          type: "GET",
-         url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key="+kobisKey+"&targetDt="+date+"&weekGb=0",
+         url: "http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key="+kobisKey+"&targetDt="+weekdate+"&weekGb=0",
          success: function(response){
             var weeklyBoxOffice=response["boxOfficeResult"]["weeklyBoxOfficeList"];
             

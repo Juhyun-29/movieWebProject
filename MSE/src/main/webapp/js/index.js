@@ -175,7 +175,6 @@ $(function(){
                   				break;
                   			}
                   		}
-                  		console.log(movieNm);
                   		if(posterList.includes("|")){
                   			var posterArr=posterList.split("|");
                   			var firstPoster=posterArr[0];
