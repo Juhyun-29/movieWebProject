@@ -10,10 +10,11 @@ body{
 	font-family: 'NanumSquareNeo';
 	background-color: black;
 }
-h2{
-	margin-bottom: 12px;
+h1{
+	font-family: 'NanumSquareNeoExtraBold';
 }
 a{
+	color: #c2c2c2;
 	text-decoration: none;
 }
 #container
@@ -102,13 +103,42 @@ a{
 	background: #161616;
 }
 
+#header{
+	margin: 50px 50px 0px 50px;
+	display: flex;
+}
+#title{
+	margin-bottom: 30px;
+}
+.header{
+	margin-bottom: 15px;
+}
 #main{
-	margin: 30px 30px 0px 30px;
+	margin-left: 30px;
+}
+#detail{
+	display: flex;
+}
+.detailHeader{
+	margin-bottom: 10px;
+}
+.detail{
+	margin-bottom: 3px;
+}
+#plot{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.list{
+	display: flex;
+	flex-direction: column;
+	margin-right: 30px;
 }
 
 #stll
 {
-	margin: 30px;
+	margin: 30px 50px;
 	display: flex;
 	flex-direction: row;
 	overflow-x:auto;

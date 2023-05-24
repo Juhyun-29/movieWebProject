@@ -91,6 +91,20 @@ public class MovieInfo extends HttpServlet {
 				}
 			}
 			
+			JSONArray productionList=new JSONArray();
+			JSONArray distributorList=new JSONArray();
+			for (int i = 0; i < staff.size(); i++) {
+				JSONObject staffResult=(JSONObject)staff.get(i);
+				if(staffResult.get("staffRoleGroup").equals("제작사")) {
+					productionList.add(staffResult);
+				}else if(staffResult.get("staffRoleGroup").equals("배급사")){
+					distributorList.add(staffResult);
+				}else {
+					continue;
+				}
+			}
+			
+			String nation=(String)movieInfo.get("nation");
 			String keywords=(String)movieInfo.get("keywords");
 			String msg="스틸컷이 없습니다.";
 			
@@ -106,6 +120,10 @@ public class MovieInfo extends HttpServlet {
 			request.setAttribute("stllList", stllList);
 			request.setAttribute("staffList", staffList);
 			request.setAttribute("actorList", actorList);
+			request.setAttribute("productionList", productionList);
+			request.setAttribute("distributorList", distributorList);
+			request.setAttribute("nation", nation);
+			request.setAttribute("keywords", keywords);
 			request.setAttribute("msg", msg);
 
 			RequestDispatcher dispatcher=request.getRequestDispatcher("movieInfo.jsp");
