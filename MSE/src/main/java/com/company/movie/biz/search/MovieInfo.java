@@ -105,7 +105,6 @@ public class MovieInfo extends HttpServlet {
 			}
 			
 			String nation=(String)movieInfo.get("nation");
-			String keywords=(String)movieInfo.get("keywords");
 			String msg="스틸컷이 없습니다.";
 			
 			request.setAttribute("movieId", movieId);
@@ -123,7 +122,6 @@ public class MovieInfo extends HttpServlet {
 			request.setAttribute("productionList", productionList);
 			request.setAttribute("distributorList", distributorList);
 			request.setAttribute("nation", nation);
-			request.setAttribute("keywords", keywords);
 			request.setAttribute("msg", msg);
 
 			RequestDispatcher dispatcher=request.getRequestDispatcher("movieInfo.jsp");

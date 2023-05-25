@@ -35,11 +35,20 @@ id varchar2(20) constraint movieBoardFK references movieMember(id)
 
 --영화 한줄평 테이블 생성
 create table movieComment(
-rseq number(5) primary key,
-movieSeq number(5),  
+rseq number(10) primary key,
+movieId varchar2(20),
+movieSeq varchar2(30),  
 nickname varchar2(30) not null,
 content varchar2(300) not null,
-rating number(2) not null,
+starpoint number(2) not null,
 regdate date default sysdate,
-id varchar2(20) constraint movieCommentFK references movieMember(id)
+id varchar2(50) constraint movieCommentFK references movieMember(id)
 )
+
+select * from movieComment
+drop table movieComment
+
+insert into movieComment(rseq,movieId,movieSeq,nickname,content,starpoint,id) values((select nvl(max(rseq),0)+1 from movieComment),'F','58089','바다의왕자','재미없어요',1,'park')
+update movieComment set content=?, starpoint=? where rseq=?
+
+select * from movieComment where movieId='F' and movieSeq='58089' order by rseq desc
